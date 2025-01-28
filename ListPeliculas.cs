@@ -36,7 +36,21 @@ namespace Informe3
             List<Peliculas> listAux = new List<Peliculas>();
             foreach (Peliculas persona in Lista)
             {
-                if (persona.Director.Equals(cadena))
+                if (persona.Director.EndsWith(cadena))
+                {
+                    listAux.Add(persona);
+                }
+            }
+            return listAux;
+        }
+
+        public List<Peliculas> AnioPar()
+        {
+            List<Peliculas> listAux = new List<Peliculas>();
+            foreach (Peliculas persona in Lista)
+            {
+                // Verificamos si el año de estreno es par
+                if (persona.AnioEstreno % 2 == 0)
                 {
                     listAux.Add(persona);
                 }

@@ -24,15 +24,23 @@ namespace Informe3
             dgvPersonasLetras.DataSource = ListPeliculas.TituloEmpieza(txtCadena.Text);
 
         }
-        
+
         private void btnComprobar_Click(object sender, EventArgs e)
         {
-            string cadenaDirector = txtCadenaDireccion.Text; 
-            List<Peliculas> directorIgual = ListPeliculas.IgualDirector(cadenaDirector); 
-            dgvPersonasLetras.Visible = true; 
+            string cadenaDirector = txtCadenaDireccion.Text;
+            List<Peliculas> directorIgual = ListPeliculas.IgualDirector(cadenaDirector);
+            dgvPersonasLetras.Visible = true;
             dgvPersonasLetras.DataSource = directorIgual;
         }
 
-
+        private void btnAbrir_Click(object sender, EventArgs e)
+        {
+            dgvPersonasLetras.Visible = true;
+            List<Peliculas> AnioPar = ListPeliculas.AnioPar();
+            dgvPersonasLetras.DataSource = AnioPar;
+        }
     }
+
+
+
 }

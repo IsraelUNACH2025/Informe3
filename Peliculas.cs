@@ -18,7 +18,6 @@ namespace Informe3
             AnioEstreno = anioEstreno;
             Director = director;
         }
-
     }
 }
 
